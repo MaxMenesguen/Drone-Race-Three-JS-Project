@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three JS Project</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Import map for Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    
+</head>
+
+
+<body>
+    <!-- This canvas is the one you will use to display your Three.js code. -->
+    <canvas id="canvas"></canvas>
+
+    <!-- GUI HUD for displaying game information -->
+    <div id="hud">
+        <p id="time">Time: 0.00s</p>
+        <p id="targets">Targets: 0 / ?</p>
+        <p id="bestTime">Best Run Time: NAN</p>
+    </div>
+
+    <!-- Overlay for different states -->
+    <div id="startOverlay" class="overlay">
+        <p class="title">Click to Play</p>
+        <div class="controls">
+            <h3>Controls:</h3>
+            <ul>
+                <li><strong>ZQSD</strong>: Move forward, backward, left, and right</li>
+                <li><strong>Space</strong>: Ascend</li>
+                <li><strong>Left Shift</strong>: Descend</li>
+                <li><strong>Mouse</strong>: Change direction (look around)</li>
+            </ul>
+        </div>
+    </div>
+    <div id="deathOverlay" class="overlay" style="display: none;">
+        <p>You crashed! Click to Replay</p>
+    </div>
+    <div id="completionOverlay" class="overlay" style="display: none;">
+        <p id="completionMessage">What a skilled player! You finished the race in 0.00s! Click to Play Again</p>
+    </div>
+
+    <!-- The import should happen after creating the other HTML elements since you will be importing them -->
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
