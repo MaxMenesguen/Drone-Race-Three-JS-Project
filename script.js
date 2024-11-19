@@ -72,7 +72,7 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
 
 // Load the drone model
 loader.load(
-    'drone.glb',
+    'models/drone.glb',
     (gltf) => {
         drone = gltf.scene; // Assign drone here to the globally declared variable
 
@@ -106,7 +106,7 @@ loader.load(
 //Load the cave model
 // Load the cave model
 loader.load(
-    'montain.glb',
+    'models/montain.glb',
     (gltf) => {
         montain = gltf.scene;
         montain.position.set(0, -80, 0); 

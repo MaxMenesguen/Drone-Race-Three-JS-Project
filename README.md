@@ -1,5 +1,7 @@
 # Drone Race Three.js Project
 
+![Drone Race Screenshot](images/droneRaceScreen.png)
+
 ## Overview
 This project is a **3D Drone Racing Game** built using **Three.js**, a popular JavaScript library for 3D graphics in the browser. In this game, players control a drone to navigate through targets placed across a mountainous landscape, aiming to complete the course as quickly as possible. The project features an engaging user interface, interactive drone controls, collision detection, and visual overlays to enhance the player's experience.
 
