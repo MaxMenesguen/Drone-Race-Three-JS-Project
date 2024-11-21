@@ -28,7 +28,7 @@ const dronecontrols = {
 };
 
 const speedMultiplier = 120;
-const rotSpeedMultiplier = 170;
+const rotSpeedMultiplier = 250;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -94,6 +94,7 @@ loader.load(
         drone.position.set(63, -12.5, 36);
         drone.scale.set(0.05, 0.05, 0.05);
         drone.rotation.set(0, Math.PI, 0);
+        
 
         // Add the drone to the scene
         scene.add(drone);
