@@ -211,7 +211,7 @@ let targetSpheres = [];
 // Track game state
 let isGameRunning = false;
 let startTime = 0;
-let bestTime = NaN;
+let bestTime = 35.60;
 
 // Function to start the game
 function startGame() {
