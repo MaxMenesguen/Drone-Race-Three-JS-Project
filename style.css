@@ -74,7 +74,7 @@ canvas {
     left: 10px; /* Adjust to place next to the FPS panel */
     color: white;
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 8px;
@@ -82,4 +82,17 @@ canvas {
 
 #hud p {
     margin: 5px 0;
+}
+
+#screenEffect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 182, 6, 0.3); /* Green with some transparency */
+    pointer-events: none; /* Allows interaction with the game while effect is active */
+    opacity: 0;
+    transition: opacity 0.5s ease-out; /* Smooth fade-out effect */
+    z-index: 10; /* Ensure it is above all other elements */
 }

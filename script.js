@@ -15,6 +15,10 @@ document.body.appendChild(stats.dom);
 // Initialize GLTFLoader
 const loader = new GLTFLoader();
 
+//screen effect 
+const screenEffect = document.getElementById('screenEffect');
+
+
 // Declare drone variable globally
 let drone;
 let montain;
@@ -270,6 +274,19 @@ targetCoordinates.forEach((coord, index) => {
     createTargetSphere(coord, `t${index}`); // Assign unique ID to each target (t0, t1, ...)
 });
 
+//trigger the effect when the drone collides the target
+function showGatePassEffect() {
+    // Set opacity to 1 to make the overlay visible
+    screenEffect.style.opacity = 1;
+    console.log("Gate pass effect triggered!");
+
+    // Use a timer to fade the effect out after 300 milliseconds
+    setTimeout(() => {
+        screenEffect.style.opacity = 0;
+    }, 300); // Adjust this value to make the effect last longer or shorter
+}
+
+
 // Collision detection function
 function detectCollisions() {
     targetSpheres.forEach(target => {
@@ -280,10 +297,13 @@ function detectCollisions() {
         if (distance < 2) {
             const targetId = target.userData.id;
 
+
             // Add the target to the set if it's not already there
             if (!collidedTargets.has(targetId)) {
                 collidedTargets.add(targetId);
                 console.log(`Collision detected with target: ${targetId}`);
+                // Trigger the screen border effect
+                showGatePassEffect();
             }
         }
     });
